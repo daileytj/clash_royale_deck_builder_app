@@ -1,0 +1,528 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto Slab', serif;
+}
+
+.hidden{
+  display:none;
+}
+
+.main {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+a{
+  text-decoration: none;
+}
+
+
+/*-------------------------------------------------------------------------*/
+
+
+/*------------------------------HEADER-------------------------------------*/
+
+
+/*-------------------------------------------------------------------------*/
+.hamburger-icon{
+  display:none;
+}
+
+nav {
+  max-width:1200px;
+  background-color: #488BF4;
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  z-index: 1;
+  opacity: .9;
+}
+
+.app-heading {
+  height: 100px;
+  float: left;
+  width: 60%;
+}
+
+.clash-logo {
+  float: left;
+  height: 80px;
+  margin: 10px;
+  width: auto;
+}
+
+nav>h1, .nav-link {
+  color: #FFFFFF;
+}
+
+nav>h1 {
+  display: inline-block;
+  float: left;
+}
+
+nav li {
+  display: inline-block;
+  line-height: 100px;
+  list-style: none;
+}
+
+.nav-wrapper li {
+  padding: 0 20px;
+}
+
+.nav-wrapper {
+  float: right;
+}
+
+.nav-link {
+  text-decoration: none;
+  border-top-width: 0;
+  border-top-width: 0;
+}
+
+.nav-link:hover{
+  color: #ff9c00;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 3px solid #ff9c00;
+  border-bottom: 3px solid #ff9c00;
+  transition-property: all;
+  transition-delay: 0s;
+  transition-duration: .5s;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+}
+
+nav:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+
+/*-------------------------------------------------------------------------*/
+
+
+/*----------------All-Pages-Pushed-Down-And-Fill-Content-Box---------------*/
+
+
+/*-------------------------------------------------------------------------*/
+
+.available-card-list, .build-page{
+  padding-top: 100px;
+}
+
+.decks-page{
+  padding-top: 125px;
+  padding-bottom: 25px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.build-page h1, .decks-page h1 {
+  color: #000000;
+}
+
+
+/*-------------------------------------------------------------------------*/
+
+
+/*------------------------------Home-Page----------------------------------*/
+
+
+/*-------------------------------------------------------------------------*/
+
+.home-page-hero-img-parallax {
+  background-image: url("https://clashroyale.com/uploaded-images/October_thumb.jpg?mtime=20161014060704");
+  height: 600px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-text-wrapper {
+  position: relative;
+  top: 300px;
+}
+
+.hero-header {
+  text-align: center;
+  background: rgba(68, 142, 242, .8);
+  width: 70%;
+  margin: 0 auto;
+  color: #ffffff;
+}
+
+.hero-button {
+  margin: 50px auto 0 auto;
+  display: block;
+  width: 170px;
+  font-size: 22px;
+  height: 36px;
+  font-weight: bold;
+  color: #ffffff;
+  border-radius: 10px;
+  background-color: rgba(68, 142, 242, .8);
+  border-color: #949494;
+  outline: none;
+}
+
+.hero-button:hover{
+  background-color: #ff9c00;
+  transform: translateX(2px);
+  transform: translateY(2px);
+  transition-property: all;
+  transition-delay: 0s;
+  transition-duration: .2s;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+}
+
+.hero-button p{
+  display: inline;
+}
+
+.fa-cog{
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: -10px;
+}
+
+.home-page-content-button{
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+
+.home-page-content-wrapper{
+  width:90%;
+  margin: 100px auto 20px auto;
+  overflow:hidden;
+}
+
+.home-page-content-wrapper h2{
+  color:#FF9C00;
+  margin-bottom: 10px;
+}
+
+.home-page-content-wrapper p{
+  margin-bottom: 10px;
+}
+
+.blue-prince{
+  width: 22.4%;
+  float: left;
+  margin-right: 30px;
+}
+
+.combo-button{
+  margin: 20px;
+}
+
+.blue-knight{
+  float: right;
+  width: 25%
+}
+
+.clearfix:before, .clearfix:after {
+  display:block;
+  content: "";
+  clear:both;
+}
+
+/*-------------------------------------------------------------------------*/
+
+
+/*------------------------------Build-Page---------------------------------*/
+
+
+/*-------------------------------------------------------------------------*/
+.deck-builder-and-options-container{
+  width: 90%;
+  margin: 20px auto;
+  border: 5px solid black;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.deck-builder-options-wrapper {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.random-button{
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    margin-right: 15px;
+    font-size: 26px;
+    background-color: rgb(208, 1, 1);
+    color: white;
+}
+
+.save-deck-button{
+  width: 300px;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 26px;
+  background-color: #FF9C00;
+  color: white;
+}
+
+.save-deck-button:hover{
+  background-color: #db8907;
+  transform: translateX(2px);
+  transform: translateY(2px);
+  transition-property: all;
+  transition-delay: 0s;
+  transition-duration: .2s;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+}
+
+.random-button:hover{
+  background-color: rgb(162, 4, 4);
+  transform: translateX(2px);
+  transform: translateY(2px);
+  transition-property: all;
+  transition-delay: 0s;
+  transition-duration: .2s;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+}
+
+fieldset {
+    margin-top: 35px;
+    border: 5px solid #5B97F5;
+    border-radius: 10px;
+    color: #ff9c00;
+}
+
+.deck-title-label,.deck-title-input,.deck-strategy-label,.deck-strategy-input,.save-deck-button,.random-button{
+  outline:none;
+}
+
+.deck-title-label{
+    display: block;
+    margin: 20px auto;
+    font-size: 26px;
+}
+
+.deck-title-input {
+    width: 80%;
+    display: block;
+    margin: 10px auto 25px auto;
+    line-height: 26px;
+    padding: 3px 15px;
+    font-size: 18px;
+    border-radius: 4px;
+    border-color: #FF9C00;
+}
+
+.deck-strategy-label{
+  display: block;
+  margin: 20px auto;
+  font-size: 26px;
+}
+
+.deck-strategy-input {
+    width: 80%;
+    display: block;
+    border: 2px solid #ff9c00;
+    margin: 5px auto 25px auto;
+    line-height: 22px;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 4px;
+    height: 300px;
+    overflow: scroll;
+}
+
+.card-container {
+    display: inline;
+}
+
+.deck-builder-and-options-container .available-card-list{
+    width: 100%;
+    padding-top: 5px;
+    margin: 0 auto;
+}
+
+/*-------------------------------------------------------------------------*/
+
+
+/*------------------------------Decks-Page---------------------------------*/
+
+
+/*-------------------------------------------------------------------------*/
+
+.deck {
+    width: 48%;
+    display: inline-block;
+    margin: 1%;
+    border: 5px solid #5B97F5;
+    border-radius: 10px;
+}
+
+.deck:hover{
+  border-color: #ff9c00;
+  transform: translateX(2px);
+  transform: translateY(2px);
+  transition-property: all;
+  transition-delay: 0s;
+  transition-duration: .2s;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+}
+
+.deck>h2 {
+    text-align: center;
+    margin: 10px auto 5px auto;
+}
+
+.deck>h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.deck-strategy {
+    width: 90%;
+    margin: 0 auto 15px auto;
+    padding: 5px;
+    height: 100px;
+    overflow: scroll;
+}
+
+
+/*-------------------------------------------------------------------------*/
+
+
+/*-------------------------Available-Card-List-----------------------------*/
+
+
+/*-------------------------------------------------------------------------*/
+
+.available-card-list {
+  width: 80%;
+  padding-top: 125px;
+  margin: 0 auto;
+}
+
+  .card{
+    display: inline-block;
+    width: 25%;
+  }
+
+  .card-image{
+    width: 100%;
+    padding: 10px;
+  }
+
+/*-------------------------------------------------------------------------*/
+
+
+/*------------------------------FOOTER-------------------------------------*/
+
+
+/*-------------------------------------------------------------------------*/
+
+footer {
+  height: 60px;
+  position:relative;
+  bottom: 0;
+  width: 100%;
+  background-color: #000000;
+  border-top: 10px solid #488BF4;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer img {
+  display: block;
+  height: 40px;
+  width: auto;
+  margin: 5px auto;
+}
+
+/*-------------------------------------------------------------------------*/
+
+
+/*------------------------------Media-Queries------------------------------*/
+
+
+/*-------------------------------------------------------------------------*/
+
+@media only screen and (max-width: 780px) {
+    .hamburger-icon{
+      display:inline-block;
+      height: 100px;
+      padding: 25px;
+      width: auto;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+    }
+
+    .nav-wrapper{
+      float:none;
+      display:none;
+    }
+
+    .nav-wrapper li {
+      width: 100%;
+      padding: 0 20px;
+      text-align: center;
+      background-color: #488BF4;
+    }
+
+    .blue-knight{
+      width:30%;
+    }
+
+    .blue-prince{
+      width:40%;
+    }
+
+    .home-page-content-wrapper {
+    margin-top: 50px;
+  }
+
+    .random-button{
+      margin: 15px auto;
+    }
+
+    .save-deck-button{
+      margin: 0 auto 20px auto;
+    }
+
+    .deck{
+      width: 100%;
+      margin: 10px auto;
+    }
+
+    .deck-strategy{
+      height: 150px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .app-heading h1{
+    display:none;
+  }
+
+  .card{
+    width:50%;
+  }
+}
