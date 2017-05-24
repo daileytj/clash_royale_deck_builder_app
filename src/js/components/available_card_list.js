@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import Card from './card';
-import * as actionCreators from '../actions/index.js';
+// import * as actionCreators from '../actions/index.js';
 
 class AvailableCardList extends React.Component{
 

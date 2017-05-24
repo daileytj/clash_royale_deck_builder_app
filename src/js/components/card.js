@@ -2,12 +2,12 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 class Card extends React.Component {
-  constructor(props){
-    super(props);
-  }
+  // constructor(props){
+  //   super(props);
+  // }
 
   render(props){
-    const{ card, image, cardName, idName, rarity, type, name, description, arena, elixirCost } = this.props;
+    const{ card/*, image, cardName, idName, rarity, type, name, description, arena, elixirCost*/ } = this.props;
 
     return(
       <div className = "card">
