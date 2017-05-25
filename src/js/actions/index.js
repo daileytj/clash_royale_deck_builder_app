@@ -57,3 +57,17 @@ export const sendStateToCards = state => {
     state
   }
 }
+
+export const addCardToCustomDeck = card => {
+  return {
+    type: 'ADD_CARD_TO_CUSTOM_DECK',
+    card
+  }
+}
+
+export const removeCardFromCustomDeck = card => {
+  return {
+    type: 'REMOVE_CARD_FROM_CUSTOM_DECK',
+    card
+  }
+}

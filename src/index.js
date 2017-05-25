@@ -15,30 +15,33 @@ import Decks from './js/views/decks';
 import AvailableCardList from './js/components/available_card_list';
 
 // Import React Router dependencies
-// import { BrowserRouter as Router} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link} from 'react-router-dom';
 // import { ConnectedRouter } from 'react-router-redux';
 // import { BrowserHistory } from 'react-router-redux';
 
 import { Provider } from 'react-redux';
 import store, { history } from './js/stores/store';
 
-import { Route/*, Switch */} from 'react-router' // react-router v4
+// import { Route, Switch } from 'react-router' // react-router v4
 import { ConnectedRouter } from 'connected-react-router'
 
 const router = (
   <Provider store = { store }>
     <ConnectedRouter history = { history } >
-      <div>
-        {/*<Switch>*/}
+      <Router>
+        <div>
           <App>
-            {/*<Route path = '/' component = {App}/>*/}
+            <Link to = '/'>Home</Link>
+            <Link to = '/build' className = 'nav-link'>Build</Link>
+            <Link to = '/decks' className = 'nav-link'>Decks</Link>
+            <Link to = '/cards' className = 'nav-link'>Cards</Link>
             <Route exact path = '/' component = {Home} />
             <Route path = '/build' component = {Build} />
             <Route path = '/decks' component = {Decks} />
             <Route path = '/cards' component = {AvailableCardList} />
           </App>
-      {/*</Switch>*/}
-    </div>
+        </div>
+      </Router>
   </ConnectedRouter>
 </Provider>
 )

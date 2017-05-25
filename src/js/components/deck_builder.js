@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-// import * as actions from '../actions/index';
+import * as actions from '../actions/index';
 import Card from '../components/card';
 
 class DeckBuilder extends React.Component{
@@ -105,34 +105,73 @@ class DeckBuilder extends React.Component{
     "elixirCost": 5,
     "order": 8,
     "__v": 0
-    }
+  },
+  {
+    "_id": "blank",
+    "idName": "blank",
+    "rarity": "",
+    "type": "",
+    "name": "Blank",
+    "description": "An Empty Space",
+    "arena": 0,
+    "elixirCost": 0,
+    "order": 0,
+    "__v": 0,
+    "image": 'blank'
+  }
   ]
+    const removeCard = (e) => {
+      let card = e.target;
+      let _id = card.closest("div").children[0].innerHTML;
+      let idName = card.closest("div").children[1].innerHTML;
+      let rarity = card.closest("div").children[2].innerHTML;
+      let type = card.closest("div").children[3].innerHTML;
+      let name = card.closest("div").children[4].innerHTML;
+      let description = card.closest("div").children[5].innerHTML;
+      let arena = card.closest("div").children[6].innerHTML;
+      let elixirCost = card.closest("div").children[7].innerHTML;
+      let order = card.closest("div").children[8].innerHTML;
+      let cardObject = {
+        '_id': _id,
+        'idName': idName,
+        'rarity': rarity,
+        'type': type,
+        'name': name,
+        'description': description,
+        'arena': arena,
+        'elixirCost': elixirCost,
+        'order': order
+      };
+      this.props.dispatch(actions.removeCardFromCustomDeck(cardObject));
+      console.log(idName, 'removed');
+      console.log('card object:', cardObject);
+    }
 
     return(
       <div className = "deck-builder-container">
-        <div className = "blank card-container deck-builder-deck slot1">
-          <Card card = {testDeck[0]}/>
+        <div className = "blank card-container deck-builder-deck slot1" onClick = {removeCard}>
+          <Card card = {testDeck[8]}/>
         </div>
-        <div className = "blank card-container deck-builder-deck slot2">
-          <Card card = {testDeck[1]}/>
+        <div className = "blank card-container deck-builder-deck slot2" onClick = {removeCard}>
+          <Card card = {testDeck[8]}/>
         </div>
-        <div className = "blank card-container deck-builder-deck slot3">
-          <Card card = {testDeck[2]}/>
+        <div className = "blank card-container deck-builder-deck slot3" onClick = {removeCard}>
+          <Card card = {testDeck[8]}/>
         </div>
-        <div className = "blank card-container deck-builder-deck slot4">
-          <Card card = {testDeck[3]}/>
+        <div className = "blank card-container deck-builder-deck slot4" onClick = {removeCard}>
+          <Card card = {testDeck[8]}/>
         </div>
-        <div className = "blank card-container deck-builder-deck slot5">
-          <Card card = {testDeck[4]}/>
+        <div className = "blank card-container deck-builder-deck slot5" onClick = {removeCard}>
+          <Card card = {testDeck[8]}/>
         </div>
-        <div className = "blank card-container deck-builder-deck slot6">
-          <Card card = {testDeck[5]}/>
+        <div className = "blank card-container deck-builder-deck slot6" onClick = {removeCard}>
+          <Card card = {testDeck[8]}/>
         </div>
-        <div className = "blank card-container deck-builder-deck slot7">
-          <Card card = {testDeck[6]}/>
+        <div className = "blank card-container deck-builder-deck slot7" onClick = {removeCard}>
+          <Card card = {testDeck[8]}/>
         </div>
-        <div className = "blank card-container deck-builder-deck slot8">
-          <Card card = {testDeck[7]}/>
+        <div className = "blank card-container deck-builder-deck slot8" onClick = {removeCard}>
+          <Card card = {testDeck[8]}/>
         </div>
       </div>
     )

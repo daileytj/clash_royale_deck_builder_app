@@ -8,8 +8,9 @@ import decks from './decks';
 import sendStateToBuild from './sendStateToBuild';
 import sendStateToDecks from './sendStateToDecks';
 import sendStateToCards from './sendStateToCards';
+import customDeck from './customDeck';
 
 const rootReducer = combineReducers({getAllAvailableCards, getAllAvailableDecks, cards, decks,
-  sendStateToBuild, sendStateToDecks, sendStateToCards, routing: routerReducer});
+  sendStateToBuild, sendStateToDecks, sendStateToCards,customDeck, routing: routerReducer});
 
 export default rootReducer;
