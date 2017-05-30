@@ -148,7 +148,7 @@ nav:after {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  /*margin-top: -18px;*/
+  margin-top: -18px;
 }
 
 .hero-text-wrapper {
@@ -469,7 +469,7 @@ footer img {
   .home-page-hero-img-parallax {
           background-attachment: scroll !important;
       }
-      
+
     .hamburger-icon{
       display:inline-block;
       height: 100px;
