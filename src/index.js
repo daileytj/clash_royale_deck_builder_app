@@ -25,21 +25,20 @@ import store, { history } from './js/stores/store';
 // import { Route, Switch } from 'react-router' // react-router v4
 import { ConnectedRouter } from 'connected-react-router'
 
-const router = (
+const router = () => {
+  return(
   <Provider store = { store }>
     <ConnectedRouter history = { history } >
       <Router>
-        <div>
           <App>
               <Route exact path = '/' component = {Home} />
               <Route path = '/build' component = {Build} />
               <Route path = '/decks' component = {Decks} />
               <Route path = '/cards' component = {AvailableCardList} />
           </App>
-        </div>
       </Router>
   </ConnectedRouter>
 </Provider>
-)
+)}
 
 ReactDOM.render(router, document.getElementById('app'));
