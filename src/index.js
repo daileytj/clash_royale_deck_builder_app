@@ -25,8 +25,7 @@ import store, { history } from './js/stores/store';
 // import { Route, Switch } from 'react-router' // react-router v4
 import { ConnectedRouter } from 'connected-react-router'
 
-const router = () => {
-  return(
+const router = (
   <Provider store = { store }>
     <ConnectedRouter history = { history } >
       <Router>
@@ -39,6 +38,6 @@ const router = () => {
       </Router>
   </ConnectedRouter>
 </Provider>
-)}
+)
 
 ReactDOM.render(router, document.getElementById('app'));
