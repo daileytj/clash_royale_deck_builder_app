@@ -36,7 +36,7 @@ class AvailableCardList extends React.Component{
 
     return(
       <div className = "available-card-list">
-        {this.props.cards.map((card,i) => <Card {...this.props} key = {i} i = {i} card = {card} onClick = {addCardToDeck}/>)}
+        {/*{this.props.cards.map((card,i) => <Card {...this.props} key = {i} i = {i} card = {card} onClick = {addCardToDeck}/>)}*/}
       </div>
     )
   }

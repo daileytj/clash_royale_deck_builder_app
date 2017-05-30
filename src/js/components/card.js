@@ -12,7 +12,7 @@ class Card extends React.Component {
 
     const imageToUse = () => {
       let image = '';
-      if(card.image === "blank"){
+      if(card.idName === "blank"){
         image =  <img className = "card-image" src = {blankCard} alt = "Blank Card"/>
       }
       else{

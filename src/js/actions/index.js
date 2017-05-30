@@ -71,3 +71,9 @@ export const removeCardFromCustomDeck = card => {
     card
   }
 }
+
+export const displayCustomDeck = () => {
+  return {
+    type: 'DISPLAY_CUSTOM_DECK'
+  }
+}

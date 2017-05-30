@@ -16,10 +16,10 @@ class Main extends Component{
     return(
       <div className = "main">
         <Header {...this.props} />
-        {/*React.cloneElement(...this.props.children, ...this.props)*/}
-        {React.cloneElement(<Home />, this.props)}
-        {React.cloneElement(<Build />, this.props)}
-        {React.cloneElement(<Decks />, this.props)}
+        {React.cloneElement(...this.props.children, ...this.props)}
+        {/*React.cloneElement(<Home />, this.props)*/}
+        {/*React.cloneElement(<Build />, this.props)*/}
+        {/*React.cloneElement(<Decks />, this.props)*/}
         <Footer />
       </div>
     )
