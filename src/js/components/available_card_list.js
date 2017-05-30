@@ -2,11 +2,12 @@ import React from 'react';
 import {connect} from 'react-redux';
 import Card from './card';
 import * as actions from '../actions/index.js';
+import store from '../stores/store';
 
 class AvailableCardList extends React.Component{
 
   render(){
-
+    let state = store.getState();
     const addCardToDeck = (e) => {
         let card = e.target;
         let _id = card.closest("div").children[0].innerHTML;
@@ -36,7 +37,7 @@ class AvailableCardList extends React.Component{
 
     return(
       <div className = "available-card-list">
-        {/*{this.props.cards.map((card,i) => <Card {...this.props} key = {i} i = {i} card = {card} onClick = {addCardToDeck}/>)}*/}
+        {state.cards.map((card,i) => <Card {...this.props} key = {i} i = {i} card = {card} onClick = {addCardToDeck}/>)}
       </div>
     )
   }
