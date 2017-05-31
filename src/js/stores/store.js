@@ -42,8 +42,7 @@ const history = createBrowserHistory();
 
 // const store = createStore(rootReducer, defaultState, applyMiddleware(middleware));
 
-const store = createStore(
-  connectRouter(history)(rootReducer), // new root reducer with router state
+const store = createStore(connectRouter(history)(rootReducer), // new root reducer with router state
   defaultState,
   compose(applyMiddleware(routerMiddleware(history), thunk))
 );

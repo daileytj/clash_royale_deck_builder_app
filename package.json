@@ -18,7 +18,8 @@
     "enzyme": "^2.8.2",
     "react-dom": "^15.5.4",
     "react-scripts": "1.0.5",
-    "react-test-renderer": "^15.5.4"
+    "react-test-renderer": "^15.5.4",
+    "redux-mock-store": "^1.2.3"
   },
   "scripts": {
     "start": "react-scripts start",

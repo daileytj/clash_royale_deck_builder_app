@@ -479,12 +479,17 @@ footer img {
       right: 0px;
     }
 
-    .nav-wrapper{
+    .hidden-for-mobile{
       float:none;
       display:none;
     }
 
+    .nav-wrapper{
+      width:100%;
+    }
+
     .nav-wrapper li {
+      line-height: 60px;
       width: 100%;
       padding: 0 20px;
       text-align: center;
@@ -501,6 +506,10 @@ footer img {
 
     .home-page-content-wrapper {
     margin-top: 50px;
+  }
+
+  .home-page-content-button{
+    margin: 20px auto 20px auto;
   }
 
     .random-button{

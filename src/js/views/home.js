@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
+import blueKnight from '../../images/blue-knight.png';
+// "https://vignette3.wikia.nocookie.net/clashroyale/images/a/a9/Blue_Prince.png/revision/latest?cb=20160108014452"
+import bluePrince from '../../images/blue-prince.png';
+// "http://www.stickpng.com/assets/thumbs/58eeb691ee9418469d17edfa.png"
 
 class Home extends Component{
   render() {
@@ -19,7 +23,7 @@ class Home extends Component{
           </div>
         </div>
         <div className = "home-page-content-wrapper">
-          <img className = "blue-prince clearfix" src = "https://vignette3.wikia.nocookie.net/clashroyale/images/a/a9/Blue_Prince.png/revision/latest?cb=20160108014452" alt = "Blue Prince"/>
+          <img className = "blue-prince clearfix" src = {bluePrince} alt = "Blue Prince"/>
           <h2>What Is Clash Royale You Ask...</h2>
           <p>Well, Clash Royale is a fast paced, card based PvP brawler. Collect Clash troops, and use them to wreak havoc on your opponent’s towers!</p>
           <h2>Yeah, So... What Am I Doing Here?</h2>
@@ -37,7 +41,7 @@ class Home extends Component{
           <h2>How Do I Build My Deck?</h2>
           <p>Click on any available card in the card list and it will be added to your deck.</p>
           <p>Click on any card in your deck to remove it.</p>
-          <img className = "blue-knight clearfix" src = "http://www.stickpng.com/assets/thumbs/58eeb691ee9418469d17edfa.png" alt = "Blue Prince"/>
+          <img className = "blue-knight clearfix" src = {blueKnight} alt = "Blue Prince"/>
           <p>Once your deck is built, fill out the form and save it to our database so that everyone can access 'Your' Ultimate Clash Royale Deck</p>
           <h2>...And, Then?</h2>
           <p>Check out yours and other players decks to compare and contrast techniques and strategies.</p>

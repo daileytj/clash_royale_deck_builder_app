@@ -6,6 +6,7 @@ import Footer from '../components/footer';
 // import Build from '../views/build';
 // import Decks from '../views/decks';
 // import AvailableCardList from '../components/available_card_list';
+// import { store } from '../../index';
 
 class Main extends Component{
   // constructor(props){
@@ -15,7 +16,7 @@ class Main extends Component{
   render() {
     return(
       <div className = "main">
-        <Header {...this.props} />
+        <Header/>
         {this.props.children}
         <Footer />
       </div>
