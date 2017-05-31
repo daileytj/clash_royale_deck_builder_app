@@ -16,7 +16,7 @@ class Card extends React.Component {
         image =  <img className = "card-image" src = {blankCard} alt = "Blank Card"/>
       }
       else{
-        image =  <img className = "card-image" src = {`http://www.clashapi.xyz/images/cards/${card.idName}.png`} alt = {card.description}/>
+        image =  <img className = "card-image" src = {`https://www.clashapi.xyz/images/cards/${card.idName}.png`} alt = {card.description}/>
       }
       return image;
     }
