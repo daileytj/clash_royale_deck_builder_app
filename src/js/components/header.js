@@ -29,19 +29,24 @@ class Header extends React.Component {
     // }
 
     render() {
+        // console.log(store);
       return (
-          <nav>
-            <li className = "app-heading" ><Link to = "/" className = "nav-link">
-              <img className = "clash-logo" src = {clashRoyaleLogo} alt = "Clash Royale Logo" />
-              <h1> Deck Builder </h1>
-            </Link></li>
-        <img className = "hamburger-icon" src = {crown}  alt = "Nav Toggle Icon"/>
-            <ul className = "nav-wrapper hidden-for-mobile" >
-              <li><Link to = "/build" className = "nav-link">BUILD</Link></li>
-              <li><Link to = "/decks" className = "nav-link">DECKS</Link></li>
-              <li><Link to = "/cards" className = "nav-link">ALL CARDS</Link></li>
-            </ul>
-          </nav>
+          <div>
+            <nav>
+              <li className = "app-heading" >
+                <Link to = "/" className = "nav-link">
+                  <img className = "clash-logo" src = {clashRoyaleLogo} alt = "Clash Royale Logo" />
+                  <h1> Deck Builder </h1>
+                </Link>
+              </li>
+              <img className = "hamburger-icon" src = {crown}  alt = "Nav Toggle Icon"/>
+              <ul className = "nav-wrapper hidden-for-mobile" >
+                <li><Link to = "/build" className = "nav-link">BUILD</Link></li>
+                <li><Link to = "/decks" className = "nav-link">DECKS</Link></li>
+                <li><Link to = "/cards" className = "nav-link">ALL CARDS</Link></li>
+              </ul>
+            </nav>
+          </div>
         );
     }
 
