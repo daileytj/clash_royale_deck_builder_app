@@ -37,6 +37,19 @@ a{
   display:none;
 }
 
+.bm-menu-wrap, .bm-overlay, .bm-menu, .bm-item-list{
+  height: auto !important;
+  display:none;
+}
+
+.bm-item-list{
+  opacity: 1;
+}
+
+.hidden-for-web{
+  display:none;
+}
+
 nav {
   max-width:1200px;
   background-color: #488BF4;
@@ -467,6 +480,14 @@ footer img {
 
   .home-page-hero-img-parallax {
           background-attachment: scroll !important;
+      }
+
+      .bm-menu-wrap, .bm-overlay, .bm-menu, .bm-item-list{
+        display:block;
+      }
+
+      .hidden-for-web{
+        display:block;
       }
 
     .hamburger-icon{
