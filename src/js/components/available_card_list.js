@@ -4,7 +4,7 @@ import Card from './card';
 import * as actions from '../actions/index.js';
 import store from '../stores/store';
 
-class AvailableCardList extends React.Component{
+export class AvailableCardList extends React.Component{
 
   render(){
     let state = store.getState();

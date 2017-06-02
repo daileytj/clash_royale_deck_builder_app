@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import githubLogo from '../../images/github-logo.svg';
 
-class Footer extends React.Component{
+export class Footer extends React.Component{
   // constructor(props){
   //   super(props);
   // }

@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import blankCard from '../../images/blank-card.png';
 
-class Card extends React.Component {
+export class Card extends React.Component {
   // constructor(props){
   //   super(props);
   // }

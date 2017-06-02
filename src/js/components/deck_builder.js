@@ -4,7 +4,7 @@ import * as actions from '../actions/index';
 import Card from '../components/card';
 import store from '../stores/store';
 
-class DeckBuilder extends React.Component{
+export class DeckBuilder extends React.Component{
   constructor(props){
     super(props);
     this.removeCard = this.removeCard.bind(this)

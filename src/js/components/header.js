@@ -7,8 +7,9 @@ import crown from '../../images/crown.png';
 // "http://liquidcc.com/wp-content/uploads/2015/02/crown.png"
 // import { store } from '../index';
 // @connect( state => ({ ... }) )
+import { slide as Menu } from 'react-burger-menu';
 
-class Header extends React.Component {
+export class Header extends React.Component {
     // constructor(props){
     //     super(props)
     //     // this.toggleNav = this.toggleNav.bind(this);
@@ -27,6 +28,9 @@ class Header extends React.Component {
     //     }
     //
     // }
+    showSettings(event){
+      event.preventDefault();
+    }
 
     render() {
         // console.log(store);
@@ -39,12 +43,14 @@ class Header extends React.Component {
                   <h1> Deck Builder </h1>
                 </Link>
               </li>
-              <img className = "hamburger-icon" src = {crown}  alt = "Nav Toggle Icon"/>
+              <Menu right>
+              <img onClick = {this.showSettings} className = "hamburger-icon" src = {crown}  alt = "Nav Toggle Icon"/>
               <ul className = "nav-wrapper hidden-for-mobile" >
-                <li><Link to = "/build" className = "nav-link">BUILD</Link></li>
-                <li><Link to = "/decks" className = "nav-link">DECKS</Link></li>
-                <li><Link to = "/cards" className = "nav-link">ALL CARDS</Link></li>
+                <li><Link to = "/build" className = "nav-link menu-item">BUILD</Link></li>
+                <li><Link to = "/decks" className = "nav-link menu-item">DECKS</Link></li>
+                <li><Link to = "/cards" className = "nav-link menu-item">ALL CARDS</Link></li>
               </ul>
+            </Menu>
             </nav>
           </div>
         );
