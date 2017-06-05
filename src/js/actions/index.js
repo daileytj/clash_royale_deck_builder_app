@@ -1,60 +1,43 @@
-// import 'isomorphic-fetch';
-//
-// export const GET_ALL_CARDS_SUCCESS = 'GET_ALL_CARDS_SUCCESS';
-// export const getAllCardsSuccess = () => ({
-//     type: GET_ALL_CARDS_SUCCESS,
-//     cards
-// });
-//
-// export const getAllCards = () => dispatch => {
-//   const url = 'http://www.clashapi.xyz/cards';
-//   return fetch(url).then(response => {
-//       if (!response.ok) {
-//           throw new Error(response.statusText);
-//       }
-//       return response;
-//   })
-//       .then(response => response.json())
-//       .then(data => {
-//           dispatch(getAllCardsSuccess(data.cards));
-//           })
-//       .catch(error =>
-//              console.log(error)
-//             );
-// };
+import 'isomorphic-fetch';
 
-export const getAllAvailableCards = cards => {
-  return {
-    type: 'GET_ALL_AVAILABLE_CARDS',
-    cards
-  }
-}
+export const GET_ALL_CARDS_SUCCESS = 'GET_ALL_CARDS_SUCCESS';
+export const getAllCardsSuccess = cards =>{
+      return {
+        type: GET_ALL_CARDS_SUCCESS,
+        cards
+      }
+    };
+
+
+export const getAllAvailableCards = () => dispatch => {
+  const url = 'http://www.clashapi.xyz/api/cards';
+  return fetch(url).then(response => {
+      if (!response.ok) {
+          throw new Error(response.statusText);
+      }
+      return response;
+  })
+      .then(response => response.json())
+      .then(data => {
+          // console.log(dispatch(getAllCardsSuccess(data)));
+          dispatch(getAllCardsSuccess(data));
+          })
+      .catch(error =>
+             console.log(error)
+            );
+};
+
+// export const getAllAvailableCards = cards => {
+//   return {
+//     type: 'GET_ALL_AVAILABLE_CARDS',
+//     cards
+//   }
+// }
 
 export const getAllAvailableDecks = decks => {
   return {
     type: 'GET_ALL_AVAILABLE_DECKS',
     decks
-  }
-}
-
-export const sendStateToBuild = state => {
-  return {
-    type: 'SEND_STATE_TO_BUILD',
-    state
-  }
-}
-
-export const sendStateToDecks = state => {
-  return {
-    type: 'SEND_STATE_TO_DECKS',
-    state
-  }
-}
-
-export const sendStateToCards = state => {
-  return {
-    type: 'SEND_STATE_TO_CARDS',
-    state
   }
 }
 

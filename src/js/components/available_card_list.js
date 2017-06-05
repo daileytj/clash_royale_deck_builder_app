@@ -4,10 +4,20 @@ import Card from './card';
 import * as actions from '../actions/index.js';
 import store from '../stores/store';
 
+
+
 export class AvailableCardList extends React.Component{
+  // constructor(props){
+  //   super(props);
+  // }
+
+  componentDidMount() {
+      this.props.dispatch(actions.getAllAvailableCards());
+    }
 
   render(){
     let state = store.getState();
+    console.log('state from available card component: ',state);
     const addCardToDeck = (e) => {
         let card = e.target;
         let _id = card.closest("div").children[0].innerHTML;
@@ -42,5 +52,9 @@ export class AvailableCardList extends React.Component{
     )
   }
 }
+
+// const mapStateToProps = (state, props) => ({
+//   cards: state.cards
+// });
 
 export default connect()(AvailableCardList);
