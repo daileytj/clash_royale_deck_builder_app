@@ -1,7 +1,7 @@
 import 'isomorphic-fetch';
 
 export const GET_ALL_CARDS_SUCCESS = 'GET_ALL_CARDS_SUCCESS';
-export const getAllCardsSuccess = cards =>{
+export const getAllCardsSuccess = cards => {
       return {
         type: GET_ALL_CARDS_SUCCESS,
         cards

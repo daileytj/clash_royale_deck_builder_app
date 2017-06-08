@@ -6,18 +6,20 @@ import store from '../stores/store';
 
 
 
-export class AvailableCardList extends React.Component{
+class AvailableCardList extends React.Component{
   // constructor(props){
   //   super(props);
   // }
 
   componentDidMount() {
-      this.props.dispatch(actions.getAllAvailableCards());
+      store.dispatch(actions.getAllAvailableCards());
     }
 
   render(){
     let state = store.getState();
+    console.log("this.props:", this.props);
     console.log('state from available card component: ',state);
+    console.log("state.getAllAvailableCards.cards:", state.getAllAvailableCards.cards);
     const addCardToDeck = (e) => {
         let card = e.target;
         let _id = card.closest("div").children[0].innerHTML;
@@ -47,14 +49,14 @@ export class AvailableCardList extends React.Component{
 
     return(
       <div className = "available-card-list">
-        {state.cards.map((card,i) => <Card {...this.props} key = {i} i = {i} card = {card} onClick = {addCardToDeck}/>)}
+        {this.props.cards.map((card,i) => <Card {...this.props} key = {i} i = {i} card = {card} onClick = {addCardToDeck}/>)}
       </div>
     )
   }
 }
 
-// const mapStateToProps = (state, props) => ({
-//   cards: state.cards
-// });
+const mapStateToProps = (state, props) => ({
+  cards: state.getAllAvailableCards.cards
+});
 
-export default connect()(AvailableCardList);
+export default connect(mapStateToProps)(AvailableCardList);

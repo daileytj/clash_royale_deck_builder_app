@@ -31,9 +31,9 @@ const router = (
       <Router>
           <App>
               <Route exact path = '/' component = {Home} />
-              <Route path = '/build' component = {Build} />
-              <Route path = '/decks' component = {Decks} />
-              <Route path = '/cards' component = {AvailableCardList} />
+              <Route exact path = '/build' component = {Build} />
+              <Route exact path = '/decks' component = {Decks} />
+              <Route exact path = '/cards' component = {AvailableCardList} />
           </App>
       </Router>
   </ConnectedRouter>
@@ -41,3 +41,4 @@ const router = (
 )
 
 ReactDOM.render(router, document.getElementById('app'));
+// registerServiceWorker();

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {connect} from 'react-redux';
+// import {connect} from 'react-redux';
 import DeckBuilder from '../components/deck_builder';
 import DeckBuildOptions from '../components/deck_build_options';
 import AvailableCardList from '../components/available_card_list';
@@ -18,4 +18,4 @@ class Build extends Component{
   }
 }
 
-export default connect()(Build);
+export default Build;
