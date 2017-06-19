@@ -1,11 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-<<<<<<< HEAD
 # Clash Royale Deck Builder
 
 Thinkful Final Capstone - Full Stack application using React/Redux.
 
-![Screenshots](./src/images/clash-royale-deck-builder-app-screenshot.png)
+![Screenshots](https://user-images.githubusercontent.com/13989985/27306693-98a8edf6-5514-11e7-9cdc-bcd0e2e54cb8.png)
 
 ## Overview
 
@@ -29,6 +28,7 @@ http://purchasing-officer-bruce-81384.netlify.com/
 * The app is built using the full stack. The front-end is built using html, css, javascript, react, and redux. The back-end using NodeJS with ExpressJS as the web server and MongoDB as the database.
 * The app draws data a custom mongo database created specifically for this app as well as a public Clash Royale API.
 * An API to access the database has been constructed in ExpressJS with 2 key endpoints at this moment, returning all user decks.
+* This app also uses an unnoficial clash royale API (https://github.com/martincarrera/clash-royale-api)
 * The prototype app is deployed as a Netlify app.
 * The app was built to be mobile responsive.
 
@@ -40,5 +40,3 @@ This is v1.0 of the app, but future enhancements are expected to include:
 * Zooming in on individual decks for more information and cleaner reading.
 * User login to keep a list of a users personal decks.
 * More form information on the custom decks to better share strategies.
-=======
->>>>>>> 8aa1e9c44fff0ec947bb1d671ba68136bd27ca85
