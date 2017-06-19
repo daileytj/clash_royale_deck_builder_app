@@ -1,5 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
+<<<<<<< HEAD
 # Clash Royale Deck Builder
 
 Thinkful Final Capstone - Full Stack application using React/Redux.
@@ -39,3 +40,5 @@ This is v1.0 of the app, but future enhancements are expected to include:
 * Zooming in on individual decks for more information and cleaner reading.
 * User login to keep a list of a users personal decks.
 * More form information on the custom decks to better share strategies.
+=======
+>>>>>>> 8aa1e9c44fff0ec947bb1d671ba68136bd27ca85
