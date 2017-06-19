@@ -28,6 +28,7 @@ http://purchasing-officer-bruce-81384.netlify.com/
 * The app is built using the full stack. The front-end is built using html, css, javascript, react, and redux. The back-end using NodeJS with ExpressJS as the web server and MongoDB as the database.
 * The app draws data a custom mongo database created specifically for this app as well as a public Clash Royale API.
 * An API to access the database has been constructed in ExpressJS with 2 key endpoints at this moment, returning all user decks.
+* This app also uses an unnoficial clash royale API (https://github.com/martincarrera/clash-royale-api)
 * The prototype app is deployed as a Netlify app.
 * The app was built to be mobile responsive.
 
