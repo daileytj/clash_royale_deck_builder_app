@@ -6,7 +6,8 @@ import './css/index.css';
 import './css/font-awesome/css/font-awesome.min.css';
 
 // Import Components
-import App from './js/views/app';
+// import App from './js/views/app';
+// import Main from './js/views/main';
 import Home from './js/views/home';
 import Build from './js/views/build';
 import Decks from './js/views/decks';
@@ -20,23 +21,22 @@ import { BrowserRouter as Router, Route} from 'react-router-dom';
 // import { BrowserHistory } from 'react-router-redux';
 
 import { Provider } from 'react-redux';
-import store, { history } from './js/stores/store';
+import store from './js/stores/store';
+// import store, { history } from './js/stores/store';
 
 // import { Route, Switch } from 'react-router' // react-router v4
-import { ConnectedRouter } from 'connected-react-router';
+// import { ConnectedRouter } from 'connected-react-router';
 
 const router = (
   <Provider store = { store }>
-    <ConnectedRouter history = { history } >
       <Router>
-          <App>
+        <div>
               <Route exact path = '/' component = {Home} />
               <Route exact path = '/build' component = {Build} />
               <Route exact path = '/decks' component = {Decks} />
               <Route exact path = '/cards' component = {AvailableCardList} />
-          </App>
+        </div>
       </Router>
-  </ConnectedRouter>
 </Provider>
 )
 

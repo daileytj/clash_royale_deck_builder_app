@@ -1,7 +1,7 @@
 // import * as actions from '../actions/index';
 
 const initialState = {
-  
+  cards: [],
 }
 
 const getAllAvailableCards = (state = initialState, action) => {

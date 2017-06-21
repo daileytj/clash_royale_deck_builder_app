@@ -1,10 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import Card from './card';
-import * as actions from '../actions/index.js';
-import store from '../stores/store';
-
-
+import {getAllAvailableCards, addCardToCustomDeck} from '../actions/index.js';
 
 class AvailableCardList extends React.Component{
   // constructor(props){
@@ -12,14 +9,14 @@ class AvailableCardList extends React.Component{
   // }
 
   componentDidMount() {
-      store.dispatch(actions.getAllAvailableCards());
+      this.props.getAllAvailableCards();
     }
 
   render(){
-    let state = store.getState();
-    console.log("this.props:", this.props);
-    console.log('state from available card component: ',state);
-    console.log("state.getAllAvailableCards.cards:", state.getAllAvailableCards.cards);
+    // let state = store.getState();
+    // console.log("this.props:", this.props);
+    // console.log('state from available card component: ',state);
+    // console.log("state.getAllAvailableCards.cards:", state.getAllAvailableCards.cards);
     const addCardToDeck = (e) => {
         let card = e.target;
         let _id = card.closest("div").children[0].innerHTML;
@@ -42,14 +39,14 @@ class AvailableCardList extends React.Component{
           'elixirCost': elixirCost,
           'order': order
         };
-        this.props.dispatch(actions.addCardToCustomDeck(cardObject));
+        this.props.addCardToCustomDeck(cardObject);
         console.log('adding', idName, 'to deck');
         console.log('card object:', cardObject);
     }
 
     return(
       <div className = "available-card-list">
-        {this.props.cards.map((card,i) => <Card {...this.props} key = {i} i = {i} card = {card} onClick = {addCardToDeck}/>)}
+        {this.props.cards.map((card,i) => <Card key = {i} i = {i} card = {card} onClick = {addCardToDeck}/>)}
       </div>
     )
   }
@@ -59,4 +56,4 @@ const mapStateToProps = (state, props) => ({
   cards: state.getAllAvailableCards.cards
 });
 
-export default connect(mapStateToProps)(AvailableCardList);
+export default connect(mapStateToProps, {getAllAvailableCards, addCardToCustomDeck})(AvailableCardList);

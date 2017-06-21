@@ -5,6 +5,8 @@ import blueKnight from '../../images/blue-knight.png';
 // "https://vignette3.wikia.nocookie.net/clashroyale/images/a/a9/Blue_Prince.png/revision/latest?cb=20160108014452"
 import bluePrince from '../../images/blue-prince.png';
 // "http://www.stickpng.com/assets/thumbs/58eeb691ee9418469d17edfa.png"
+// import Header from '../components/header';
+// import Footer from '../components/footer';
 
 class Home extends Component{
   render() {

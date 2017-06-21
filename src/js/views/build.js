@@ -9,9 +9,9 @@ class Build extends Component{
     return(
       <div className = "build-page">
         <div className = "deck-builder-and-options-container">
-          <DeckBuilder {...this.props} />
-          <DeckBuildOptions {...this.props} />
-          <AvailableCardList {...this.props} />
+          <DeckBuilder />
+          <DeckBuildOptions />
+          <AvailableCardList />
         </div>
       </div>
     )
