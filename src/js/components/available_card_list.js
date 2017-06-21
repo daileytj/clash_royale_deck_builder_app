@@ -13,10 +13,6 @@ class AvailableCardList extends React.Component{
     }
 
   render(){
-    // let state = store.getState();
-    // console.log("this.props:", this.props);
-    // console.log('state from available card component: ',state);
-    // console.log("state.getAllAvailableCards.cards:", state.getAllAvailableCards.cards);
     const addCardToDeck = (e) => {
         let card = e.target;
         let _id = card.closest("div").children[0].innerHTML;
