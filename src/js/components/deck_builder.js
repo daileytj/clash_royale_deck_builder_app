@@ -10,21 +10,30 @@ export class DeckBuilder extends React.Component{
   }
 
   removeCard(e){
-    let card = e.target.ref;
+    let card = e.target;
+    let _id = card.closest("div").children[0].innerHTML;
+    let idName = card.closest("div").children[1].innerHTML;
+    let rarity = card.closest("div").children[2].innerHTML;
+    let type = card.closest("div").children[3].innerHTML;
+    let name = card.closest("div").children[4].innerHTML;
+    let description = card.closest("div").children[5].innerHTML;
+    let arena = card.closest("div").children[6].innerHTML;
+    let elixirCost = card.closest("div").children[7].innerHTML;
+    let order = card.closest("div").children[8].innerHTML;
     let cardObject = {
-      '_id': card._id,
-      'idName': card.idName,
-      'rarity': card.rarity,
-      'type': card.type,
-      'name': card.name,
-      'description': card.description,
-      'arena': card.arena,
-      'elixirCost': card.elixirCost,
-      'order': card.order
+      '_id': _id,
+      'idName': idName,
+      'rarity': rarity,
+      'type': type,
+      'name': name,
+      'description': description,
+      'arena': arena,
+      'elixirCost': elixirCost,
+      'order': order
     };
     this.props.removeCardFromCustomDeck(cardObject);
-    console.log(card.idName, 'removed');
-    console.log('card object:', cardObject);
+    console.log(idName, 'removed');
+    console.log('card object:', card);
 
   }
 
