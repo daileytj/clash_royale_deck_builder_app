@@ -11,14 +11,14 @@ var config = require('./config');
 
 //import router for decks
 const {
-    DeckssRouter
+    DecksRouter
 } = require('./decks/router');
 
 /* STEP 2 - initialize the app*/
 var app = express();
 
 // use router for decks api call
-app.use('/decks', DeckRouter);
+app.use('/decks', DecksRouter);
 
 // serves static files and uses json bodyparser
 app.use(bodyParser.json());
