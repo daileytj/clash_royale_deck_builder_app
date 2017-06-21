@@ -1,39 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-// import * as actions from '../actions/index';
 import clashRoyaleLogo from '../../images/clash-royale-logo.png';
 import crown from '../../images/crown.png';
 // "http://liquidcc.com/wp-content/uploads/2015/02/crown.png"
-// import { store } from '../index';
-// @connect( state => ({ ... }) )
 import { slide as Menu } from 'react-burger-menu';
 
 export class Header extends React.Component {
-    // constructor(props){
-    //     super(props)
-    //     // this.toggleNav = this.toggleNav.bind(this);
-    // }
 
-    // toggleNav(){
-    //     let nav = document.getElementsByClassName('nav-wrapper');
-    //     let navElement = nav[0];
-    //     console.log('nav', nav);
-    //     console.log('nav[0].className', nav[0].className);
-    //     if(navElement.classList.contains('hidden-for-mobile')){
-    //         navElement.classList -= 'hidden-for-mobile';
-    //     }
-    //     else{
-    //         navElement.classList += 'hidden-for-mobile';
-    //     }
-    //
-    // }
     showSettings(event){
       event.preventDefault();
     }
 
     render() {
-        // console.log(store);
       return (
           <div>
             <nav>
