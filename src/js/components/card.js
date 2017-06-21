@@ -3,12 +3,9 @@ import {connect} from 'react-redux';
 import blankCard from '../../images/blank-card.png';
 
 export class Card extends React.Component {
-  // constructor(props){
-  //   super(props);
-  // }
 
   render(props){
-    const{ card/*, image, cardName, idName, rarity, type, name, description, arena, elixirCost*/ } = this.props;
+    const{ card } = this.props;
 
     const imageToUse = () => {
       let image = '';
