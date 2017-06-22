@@ -2,16 +2,17 @@ const initialState = {
   "customDeck": {
     "card1": {
     "customSlotNumber": 1,
-    "_id": "58d176a56d804500104b124e",
-    "idName": "bomber",
-    "rarity": "Common",
-    "type": "Troop",
-    "name": "Bomber",
-    "description": "Small, lightly protected skeleton that throws bombs. Deals area damage that can wipe out a swarm of enemies.",
+    "_id": "blank",
+    "idName": "blank",
+    "rarity": "",
+    "type": "",
+    "name": "Blank",
+    "description": "An Empty Space",
     "arena": 0,
-    "elixirCost": 3,
-    "order": 2,
-    "__v": 0
+    "elixirCost": 0,
+    "order": 0,
+    "__v": 0,
+    "image": 'blank'
     },
     "card2": {
       "customSlotNumber": 2,
