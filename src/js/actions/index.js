@@ -27,13 +27,6 @@ export const getAllAvailableCards = () => dispatch => {
             );
 };
 
-// export const getAllAvailableCards = cards => {
-//   return {
-//     type: 'GET_ALL_AVAILABLE_CARDS',
-//     cards
-//   }
-// }
-
 export const getAllAvailableDecks = decks => {
   return {
     type: 'GET_ALL_AVAILABLE_DECKS',

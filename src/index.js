@@ -6,35 +6,29 @@ import './css/index.css';
 import './css/font-awesome/css/font-awesome.min.css';
 
 // Import Components
-// import App from './js/views/app';
-// import Main from './js/views/main';
 import Home from './js/views/home';
 import Build from './js/views/build';
 import Decks from './js/views/decks';
-// import CardDetails from './js/views/cardDetails';
-// import Deck from './js/views/deck';
+import Header from './js/components/header';
+import Footer from './js/components/footer';
 import AvailableCardList from './js/components/available_card_list';
 
 // Import React Router dependencies
 import { BrowserRouter as Router, Route} from 'react-router-dom';
-// import { ConnectedRouter } from 'react-router-redux';
-// import { BrowserHistory } from 'react-router-redux';
 
 import { Provider } from 'react-redux';
 import store from './js/stores/store';
-// import store, { history } from './js/stores/store';
-
-// import { Route, Switch } from 'react-router' // react-router v4
-// import { ConnectedRouter } from 'connected-react-router';
 
 const router = (
   <Provider store = { store }>
       <Router>
         <div>
+              <Header />
               <Route exact path = '/' component = {Home} />
               <Route exact path = '/build' component = {Build} />
               <Route exact path = '/decks' component = {Decks} />
               <Route exact path = '/cards' component = {AvailableCardList} />
+              <Footer />
         </div>
       </Router>
 </Provider>
