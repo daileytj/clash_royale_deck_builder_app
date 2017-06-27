@@ -24,7 +24,7 @@ DeckSchema.methods.apiRepr = function() {
   return {
     title: this.title|| '',
     strategy: this.strategy || '',
-    deck: this.deck || ''
+    customDeck: this.customDeck || ''
   };
 };
 

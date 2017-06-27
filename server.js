@@ -2,7 +2,6 @@
 //for express
 var express = require('express');
 var bodyParser = require('body-parser');
-var events = require('events');
 var path = require('path');
 
 //for the db
@@ -26,15 +25,6 @@ app.use(express.static('public'));
 
 app.use(bodyParser.urlencoded({
     extended: true
-}));
-app.use(methodOverride());
-
-app.use(cookieParser());
-app.use(expressSession({
-    secret: 'secret123',
-    resave: true,
-    saveUninitialized: true,
-    activeDuration: 5 * 60 * 1000
 }));
 
 let server;
@@ -75,12 +65,6 @@ function closeServer() {
     });
 }
 
-// if (require.main === module) {
-//   runServer().catch(err => console.error(err));
-// }
-
-
-//module.exports = {app, runServer, closeServer};
 exports.app = app;
 exports.runServer = runServer;
 exports.closeServer = closeServer;
