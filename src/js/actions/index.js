@@ -48,10 +48,10 @@ export const addCardToCustomDeck = card => {
   }
 }
 
-export const removeCardFromCustomDeck = card => {
+export const removeCardFromCustomDeck = cardIndex => {
   return {
     type: 'REMOVE_CARD_FROM_CUSTOM_DECK',
-    card
+    cardIndex
   }
 }
 

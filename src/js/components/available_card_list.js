@@ -12,37 +12,16 @@ class AvailableCardList extends React.Component{
       this.props.getAllAvailableCards();
     }
 
-  render(){
-    const addCardToDeck = (e) => {
-        let card = e.target;
-        let _id = card.closest("div").children[0].innerHTML;
-        let idName = card.closest("div").children[1].innerHTML;
-        let rarity = card.closest("div").children[2].innerHTML;
-        let type = card.closest("div").children[3].innerHTML;
-        let name = card.closest("div").children[4].innerHTML;
-        let description = card.closest("div").children[5].innerHTML;
-        let arena = card.closest("div").children[6].innerHTML;
-        let elixirCost = card.closest("div").children[7].innerHTML;
-        let order = card.closest("div").children[8].innerHTML;
-        let cardObject = {
-          '_id': _id,
-          'idName': idName,
-          'rarity': rarity,
-          'type': type,
-          'name': name,
-          'description': description,
-          'arena': arena,
-          'elixirCost': elixirCost,
-          'order': order
-        };
-        this.props.addCardToCustomDeck(cardObject);
-        console.log('adding', idName, 'to deck');
-        console.log('card object:', cardObject);
+    addCardHandler(card){
+      console.log("addcardhandlercard:", card);
+      this.props.addCardToCustomDeck(card);
+
     }
 
+  render(){
     return(
       <div className = "available-card-list">
-        {this.props.cards.map((card,i) => <Card key = {i} i = {i} card = {card} onClick = {addCardToDeck}/>)}
+        {this.props.cards.map((card,i) => <Card key = {i} i = {i} card = {card} onClick = {this.addCardHandler.bind(this, card)}/>)}
       </div>
     )
   }
