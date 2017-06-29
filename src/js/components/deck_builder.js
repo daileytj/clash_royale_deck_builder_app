@@ -10,8 +10,8 @@ export class DeckBuilder extends React.Component{
   }
 
   render(){
-    let numOfBlankCards = 8-this.props.cards.length;
-    let blankCardsArray = [];
+    let numOfBlankCards=8-this.props.cards.length;
+    let blankCardsArray=[];
     while(numOfBlankCards > 0){
       blankCardsArray.push({
             idName: 'blank'
@@ -19,10 +19,10 @@ export class DeckBuilder extends React.Component{
       numOfBlankCards -= 1;
     };
     return(
-      <div className = "deck-builder-container">
+      <div className="deck-builder-container">
         {this.props.cards.map((item, index) => (
           <div className="card-container deck-builder-deck">
-              <Card card={item} key={`deck-card-${index}`} onClick = {this.deleteCardHandler.bind(this, index)} />
+              <Card card={item} key={`deck-card-${index}`} onClick={this.deleteCardHandler.bind(this, index)} />
           </div>
         ))}
         {
@@ -37,7 +37,7 @@ export class DeckBuilder extends React.Component{
   }
 }
 
-const mapStateToProps = (state, props) => ({
+const mapStateToProps=(state, props) => ({
   cards: state.customDeck.cards
 });
 

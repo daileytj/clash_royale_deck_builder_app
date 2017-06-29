@@ -3,10 +3,9 @@ import {connect} from 'react-redux';
 import Deck from './deck';
 
 class Decks extends Component{
-  //place after h2-> {this.props.decks.map((deck, i) => <Deck {...this.props} key = {i} i = {i} deck = {deck}/>)}
-  render() {
 
-    const testDecks = {
+  render() {
+  const testDecks={
   "title": "Another Awesome Deck",
   "strategy": "The Ultimate Deck requires little strategy. Deploy your troops and watch the towers fall... Collect Crowns... Claim Victory!...The Ultimate Deck requires little strategy. Deploy your troops and watch the towers fall... Collect Crowns... Claim Victory!... The Ultimate Deck requires little strategy. Deploy your troops and watch the towers fall... Collect Crowns... Claim Victory!... The Ultimate Deck requires little strategy. Deploy your troops and watch the towers fall... Collect Crowns... Claim Victory! ",
   "cards": [{
@@ -108,15 +107,15 @@ class Decks extends Component{
 };
 
     return(
-      <div className = "decks-page">
-        <Deck className = "a-deck deck1" deck = {testDecks.cards} title = {testDecks.title} strategy = {testDecks.strategy}/>
-        <Deck className = "a-deck deck2" deck = {testDecks.cards} title = {testDecks.title} strategy = {testDecks.strategy}/>
-        <Deck className = "a-deck deck3" deck = {testDecks.cards} title = {testDecks.title} strategy = {testDecks.strategy}/>
-        <Deck className = "a-deck deck4" deck = {testDecks.cards} title = {testDecks.title} strategy = {testDecks.strategy}/>
-        <Deck className = "a-deck deck1" deck = {testDecks.cards} title = {testDecks.title} strategy = {testDecks.strategy}/>
-        <Deck className = "a-deck deck2" deck = {testDecks.cards} title = {testDecks.title} strategy = {testDecks.strategy}/>
-        <Deck className = "a-deck deck3" deck = {testDecks.cards} title = {testDecks.title} strategy = {testDecks.strategy}/>
-        <Deck className = "a-deck deck4" deck = {testDecks.cards} title = {testDecks.title} strategy = {testDecks.strategy}/>
+      <div className="decks-page">
+        <Deck className="a-deck deck1" deck={testDecks.cards} title={testDecks.title} strategy={testDecks.strategy}/>
+        <Deck className="a-deck deck2" deck={testDecks.cards} title={testDecks.title} strategy={testDecks.strategy}/>
+        <Deck className="a-deck deck3" deck={testDecks.cards} title={testDecks.title} strategy={testDecks.strategy}/>
+        <Deck className="a-deck deck4" deck={testDecks.cards} title={testDecks.title} strategy={testDecks.strategy}/>
+        <Deck className="a-deck deck1" deck={testDecks.cards} title={testDecks.title} strategy={testDecks.strategy}/>
+        <Deck className="a-deck deck2" deck={testDecks.cards} title={testDecks.title} strategy={testDecks.strategy}/>
+        <Deck className="a-deck deck3" deck={testDecks.cards} title={testDecks.title} strategy={testDecks.strategy}/>
+        <Deck className="a-deck deck4" deck={testDecks.cards} title={testDecks.title} strategy={testDecks.strategy}/>
       </div>
     )
   }

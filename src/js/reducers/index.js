@@ -7,7 +7,7 @@ import cards from './cards';
 import decks from './decks';
 import customDeck from './customDeck';
 
-const rootReducer = combineReducers({getAllAvailableCards, getAllAvailableDecks, cards, decks,
+const rootReducer=combineReducers({getAllAvailableCards, getAllAvailableDecks, cards, decks,
   customDeck, routing: routerReducer});
 
 export default rootReducer;

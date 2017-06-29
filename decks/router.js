@@ -1,12 +1,12 @@
-const express = require('express');
-const jsonParser = require('body-parser').json();
+const express=require('express');
+const jsonParser=require('body-parser').json();
 
 
 const {
     Deck
-} = require('./models');
+}=require('./models');
 
-const DecksRouter = express.Router();
+const DecksRouter=express.Router();
 
 DecksRouter.use(jsonParser);
 
@@ -39,7 +39,7 @@ DecksRouter.post('/', (req, res) => {
         });
     }
 
-    let title = req.body.title;
+    let title=req.body.title;
     console.log(title);
     if (typeof title !== 'string') {
         return res.status(422).json({
@@ -47,7 +47,7 @@ DecksRouter.post('/', (req, res) => {
         });
     }
 
-    title = title.trim();
+    title=title.trim();
 
     if (title === '') {
         return res.status(422).json({
@@ -72,6 +72,6 @@ DecksRouter.post('/', (req, res) => {
         });
 });
 
-module.exports = {
+module.exports={
     DecksRouter
 };

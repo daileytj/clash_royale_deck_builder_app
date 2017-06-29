@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// import registerServiceWorker from './registerServiceWorker';
 import './css/index.css';
 import './css/font-awesome/css/font-awesome.min.css';
 
@@ -19,15 +18,15 @@ import { BrowserRouter as Router, Route} from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './js/stores/store';
 
-const router = (
-  <Provider store = { store }>
+const router=(
+  <Provider store={ store }>
       <Router>
         <div>
               <Header />
-              <Route exact path = '/' component = {Home} />
-              <Route exact path = '/build' component = {Build} />
-              <Route exact path = '/decks' component = {Decks} />
-              <Route exact path = '/cards' component = {AvailableCardList} />
+              <Route exact path='/' component={Home} />
+              <Route exact path='/build' component={Build} />
+              <Route exact path='/decks' component={Decks} />
+              <Route exact path='/cards' component={AvailableCardList} />
               <Footer />
         </div>
       </Router>
@@ -35,4 +34,3 @@ const router = (
 )
 
 ReactDOM.render(router, document.getElementById('app'));
-// registerServiceWorker();

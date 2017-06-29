@@ -1,20 +1,20 @@
 /* STEP 1 - load external resources*/
 //for express
-var express = require('express');
-var bodyParser = require('body-parser');
-var path = require('path');
+var express=require('express');
+var bodyParser=require('body-parser');
+var path=require('path');
 
 //for the db
-var mongoose = require('mongoose');
-var config = require('./config');
+var mongoose=require('mongoose');
+var config=require('./config');
 
 //import router for decks
 const {
     DecksRouter
-} = require('./decks/router');
+}=require('./decks/router');
 
 /* STEP 2 - initialize the app*/
-var app = express();
+var app=express();
 
 // use router for decks api call
 app.use('/decks', DecksRouter);
@@ -28,7 +28,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 let server;
-var runServer = function(callback) {
+var runServer=function(callback) {
     mongoose.connect(config.DATABASE_URL, function(err) {
         if (err && callback) {
             return callback(err);
@@ -65,6 +65,6 @@ function closeServer() {
     });
 }
 
-exports.app = app;
-exports.runServer = runServer;
-exports.closeServer = closeServer;
+exports.app=app;
+exports.runServer=runServer;
+exports.closeServer=closeServer;

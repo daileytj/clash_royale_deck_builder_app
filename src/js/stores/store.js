@@ -3,6 +3,7 @@ import { createBrowserHistory } from 'history';
 import thunk from 'redux-thunk';
 import { connectRouter, routerMiddleware } from 'connected-react-router'
 import { createLogger } from 'redux-logger';
+import promiseMiddleware from '../middleware/promise-middleware';
 
 import rootReducer from '../reducers/index';
 
@@ -10,16 +11,16 @@ import rootReducer from '../reducers/index';
 import decks from '../data/decks';
 
 // create an object for the default data
-const defaultState = {
+const defaultState={
   // cards
   decks
 };
 
-const history = createBrowserHistory();
+const history=createBrowserHistory();
 
-const store = createStore(connectRouter(history)(rootReducer), // new root reducer with router state
+const store=createStore(connectRouter(history)(rootReducer), // new root reducer with router state
   defaultState,
-  compose(applyMiddleware(routerMiddleware(history), thunk, createLogger()),window.devToolsExtension ? window.devToolsExtension() : f => f)
+  compose(applyMiddleware(routerMiddleware(history), thunk, promiseMiddleware, createLogger()),window.devToolsExtension ? window.devToolsExtension() : f => f)
 
 );
 

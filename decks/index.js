@@ -1,11 +1,11 @@
 const {
     Deck
-} = require('./models');
+}=require('./models');
 const {
     DecksRouter
-} = require('./router');
+}=require('./router');
 
-module.exports = {
+module.exports={
     Deck,
     DecksRouter
 };

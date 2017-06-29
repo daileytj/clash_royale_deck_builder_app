@@ -20,14 +20,14 @@ class AvailableCardList extends React.Component{
 
   render(){
     return(
-      <div className = "available-card-list">
-        {this.props.cards.map((card,i) => <Card key = {i} i = {i} card = {card} onClick = {this.addCardHandler.bind(this, card)}/>)}
+      <div className="available-card-list">
+        {this.props.cards.map((card,i) => <Card key={i} i={i} card={card} onClick={this.addCardHandler.bind(this, card)}/>)}
       </div>
     )
   }
 }
 
-const mapStateToProps = (state, props) => ({
+const mapStateToProps=(state, props) => ({
   cards: state.getAllAvailableCards.cards
 });
 

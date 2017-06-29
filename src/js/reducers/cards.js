@@ -1,4 +1,4 @@
-const cards = (state = [], action) => {
+const cards=(state=[], action) => {
   // console.log('cards');
   return state;
 }

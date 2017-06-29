@@ -7,8 +7,8 @@ import AvailableCardList from '../components/available_card_list';
 class Build extends Component{
   render() {
     return(
-      <div className = "build-page">
-        <div className = "deck-builder-and-options-container">
+      <div className="build-page">
+        <div className="deck-builder-and-options-container">
           <DeckBuilder />
           <DeckBuildOptions />
           <AvailableCardList />

@@ -1,4 +1,4 @@
-const cards = [
+const cards=[
 {
 "_id": "58d176a56d804500104b1248",
 "idName": "arrows",

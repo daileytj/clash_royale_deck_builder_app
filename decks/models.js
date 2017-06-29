@@ -1,10 +1,10 @@
-const bcrypt = require('bcryptjs');
-const mongoose = require('mongoose');
+const bcrypt=require('bcryptjs');
+const mongoose=require('mongoose');
 
-mongoose.Promise = global.Promise;
+mongoose.Promise=global.Promise;
 
 
-const DeckSchema = mongoose.Schema({
+const DeckSchema=mongoose.Schema({
   title: {
     type: String,
     required: true,
@@ -20,7 +20,7 @@ const DeckSchema = mongoose.Schema({
   }
 });
 
-DeckSchema.methods.apiRepr = function() {
+DeckSchema.methods.apiRepr=function() {
   return {
     title: this.title|| '',
     strategy: this.strategy || '',
@@ -28,6 +28,6 @@ DeckSchema.methods.apiRepr = function() {
   };
 };
 
-const Deck = mongoose.model('Deck', DeckSchema);
+const Deck=mongoose.model('Deck', DeckSchema);
 
-module.exports = {Deck};
+module.exports={Deck};

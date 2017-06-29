@@ -1,4 +1,4 @@
-const decks = [
+const decks=[
 
   {
     "deckName": "deck 1",
