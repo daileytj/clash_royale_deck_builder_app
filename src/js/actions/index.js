@@ -34,9 +34,40 @@ export const displayCustomDeck=() => {
   }
 }
 
-export const getAllAvailableDecks=decks => {
+const GET_ALL_AVAILABLE_DECKS_TRIGGERED='GET_ALL_AVAILABLE_DECKS_TRIGGERED';
+const GET_ALL_AVAILABLE_DECKS_SUCCESS='GET_ALL_AVAILABLE_DECKS_SUCCESS';
+const GET_ALL_AVAILABLE_DECKS_FAILURE='GET_ALL_AVAILABLE_DECKS_FAILURE';
+
+export const getAllAvailableDecks=()=> {
+    const promise=fetch('/decks/');
+    return{
+          onRequest: GET_ALL_AVAILABLE_DECKS_TRIGGERED,
+          onSuccess: GET_ALL_AVAILABLE_DECKS_SUCCESS,
+          onFailure: GET_ALL_AVAILABLE_DECKS_FAILURE,
+          promise,
+    };
+}
+
+const ADD_NEW_CUSTOM_DECK_TRIGGERED='ADD_NEW_CUSTOM_DECK_TRIGGERED';
+const ADD_NEW_CUSTOM_DECK_SUCCESS='ADD_NEW_CUSTOM_DECK_SUCCESS';
+const ADD_NEW_CUSTOM_DECK_FAILURE='ADD_NEW_CUSTOM_DECK_FAILURE';
+
+export const addNewCustomDeck=(title, strategy, customDeck)=>{
+  const promise = fetch('/users/', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+          title,
+          strategy,
+          customDeck
+      }),
+  });
   return {
-    type: 'GET_ALL_AVAILABLE_DECKS',
-    decks
-  }
+      onRequest: ADD_NEW_CUSTOM_DECK_TRIGGERED,
+      onSuccess: ADD_NEW_CUSTOM_DECK_SUCCESS,
+      onFailure: ADD_NEW_CUSTOM_DECK_FAILURE,
+      promise,
+  };
 }
