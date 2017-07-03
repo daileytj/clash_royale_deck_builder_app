@@ -15,8 +15,8 @@ const DeckSchema=mongoose.Schema({
     required: true
   },
   customDeck: {
-    type: Object,
-  required:true
+    type: Array,
+    required:true
   }
 });
 

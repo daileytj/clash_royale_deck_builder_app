@@ -125,7 +125,7 @@ nav:after {
 /*-------------------------------------------------------------------------*/
 
 
-/*----------------All-Pages-Pushed-Down-And-Fill-Content-Box---------------*/
+/*-------------------------------------------------------------------------*/
 
 
 /*-------------------------------------------------------------------------*/
@@ -280,6 +280,7 @@ nav:after {
     font-size: 26px;
     background-color: rgb(208, 1, 1);
     color: white;
+    margin-bottom: 30px;
 }
 
 .save-deck-button{
@@ -289,6 +290,7 @@ nav:after {
   font-size: 26px;
   background-color: #FF9C00;
   color: white;
+  margin-bottom: 30px;
 }
 
 .save-deck-button:hover{

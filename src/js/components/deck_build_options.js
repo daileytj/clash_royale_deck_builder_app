@@ -8,7 +8,7 @@ export class DeckBuildOptions extends React.Component{
   submitHandler(values) {
         const title=values.title;
         const strategy=values.strategy;
-        const customDeck=this.props.customDeck;
+        const customDeck=this.props.customDeck.cards;
         this.props.addNewCustomDeck(title, strategy, customDeck);
     }
 
@@ -17,22 +17,22 @@ export class DeckBuildOptions extends React.Component{
       <div className="deck-builder-options-wrapper">
           <form onSubmit={this.props.handleSubmit(this.submitHandler.bind(this))}>
             <fieldset>
-              {/*<button className="random-button">Randomize</button>*/}
-              <button type="submit" className="save-deck-button">Save Deck</button>
               <label className="deck-title-label" name="title">Title</label>
               <Field id="title" component="input" name="title" className="deck-title-input" type="text" placeholder="My Ultimate Deck" required/>
               <label className="deck-strategy-label" name="strategy">Strategy</label>
               <Field id="strategy" component="textarea" name="strategy" className="deck-strategy-input" type="text" placeholder="The Ultimate Deck requires little strategy. Deploy your troops and watch the towers fall... Collect Crowns... Claim Victory!" required/>
-            </fieldset>
+              {/*<button className="random-button">Randomize</button>*/}
+              <button type="submit" className="save-deck-button">Save Deck</button>
+        </fieldset>
           </form>
       </div>
     )
   }
 }
 
-const mapStateToProps=(state, props)=>{
+const mapStateToProps=(state, props)=>({
   customDeck: state.customDeck
-}
+})
 
 export default connect(mapStateToProps, { addNewCustomDeck })(reduxForm({
     form: 'DeckBuildOption',

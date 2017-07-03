@@ -53,15 +53,19 @@ const ADD_NEW_CUSTOM_DECK_SUCCESS='ADD_NEW_CUSTOM_DECK_SUCCESS';
 const ADD_NEW_CUSTOM_DECK_FAILURE='ADD_NEW_CUSTOM_DECK_FAILURE';
 
 export const addNewCustomDeck=(title, strategy, customDeck)=>{
+  console.log("------params from addNewCustomDeck action creator-----");
+  console.log("title:", title);
+  console.log("strategy:", strategy);
+  console.log("customDeck:", customDeck);
   const promise = fetch('http://localhost:8080/decks/', {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-          title,
-          strategy,
-          customDeck
+          title: title,
+          strategy: strategy,
+          customDeck: customDeck,
       }),
   });
   return {

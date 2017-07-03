@@ -59,7 +59,7 @@ DecksRouter.post('/', (req, res) => {
             .create({
                 title: req.body.title,
                 strategy: req.body.strategy,
-                customDeck: req.body.cards
+                customDeck: req.body.customDeck
             })
         .then(deck => {
             return res.status(201).json(deck.apiRepr());
