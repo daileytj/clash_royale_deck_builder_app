@@ -5,7 +5,7 @@ const GET_ALL_AVAILABLE_CARDS_SUCCESS='GET_ALL_AVAILABLE_CARDS_SUCCESS';
 const GET_ALL_AVAILABLE_CARDS_FAILURE='GET_ALL_AVAILABLE_CARDS_FAILURE';
 
 export const getAllAvailableCards=() => {
-  const promise=fetch('https://www.clashapi.xyz/api/cards');
+  const promise=fetch('http://www.clashapi.xyz/api/cards');
   return{
         onRequest: GET_ALL_AVAILABLE_CARDS_TRIGGERED,
         onSuccess: GET_ALL_AVAILABLE_CARDS_SUCCESS,
