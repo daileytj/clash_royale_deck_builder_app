@@ -5,7 +5,6 @@ import Card from '../components/card';
 class Deck extends Component {
 
   render(props){
-    console.log("this.props.deck", this.props.deck);
     const {deck,title,strategy}=this.props;
     return(
       <div className="deck">
