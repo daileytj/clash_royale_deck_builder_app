@@ -4,16 +4,12 @@ import thunk from 'redux-thunk';
 import { connectRouter, routerMiddleware } from 'connected-react-router'
 import { createLogger } from 'redux-logger';
 import promiseMiddleware from '../middleware/promise-middleware';
-
+// import { reducer as formReducer } from 'redux-form';
 import rootReducer from '../reducers/index';
-
-// import cards from '../data/cards';
-import decks from '../data/decks';
 
 // create an object for the default data
 const defaultState={
-  // cards
-  decks
+
 };
 
 const history=createBrowserHistory();

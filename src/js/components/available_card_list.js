@@ -4,16 +4,12 @@ import Card from './card';
 import {getAllAvailableCards, addCardToCustomDeck} from '../actions/index.js';
 
 class AvailableCardList extends React.Component{
-  // constructor(props){
-  //   super(props);
-  // }
-
+  
   componentDidMount() {
       this.props.getAllAvailableCards();
     }
 
     addCardHandler(card){
-      console.log("addcardhandlercard:", card);
       this.props.addCardToCustomDeck(card);
 
     }

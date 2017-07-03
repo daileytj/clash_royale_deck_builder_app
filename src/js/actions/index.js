@@ -39,7 +39,7 @@ const GET_ALL_AVAILABLE_DECKS_SUCCESS='GET_ALL_AVAILABLE_DECKS_SUCCESS';
 const GET_ALL_AVAILABLE_DECKS_FAILURE='GET_ALL_AVAILABLE_DECKS_FAILURE';
 
 export const getAllAvailableDecks=()=> {
-    const promise=fetch('/decks/');
+    const promise=fetch('http://localhost:8080/decks/');
     return{
           onRequest: GET_ALL_AVAILABLE_DECKS_TRIGGERED,
           onSuccess: GET_ALL_AVAILABLE_DECKS_SUCCESS,
@@ -53,7 +53,7 @@ const ADD_NEW_CUSTOM_DECK_SUCCESS='ADD_NEW_CUSTOM_DECK_SUCCESS';
 const ADD_NEW_CUSTOM_DECK_FAILURE='ADD_NEW_CUSTOM_DECK_FAILURE';
 
 export const addNewCustomDeck=(title, strategy, customDeck)=>{
-  const promise = fetch('/users/', {
+  const promise = fetch('http://localhost:8080/decks/', {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json',

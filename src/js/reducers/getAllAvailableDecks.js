@@ -1,5 +1,5 @@
 const initialState={
-  cards: []
+  decks: []
 }
 
 const getAllAvailableDecks=(state=initialState, action) => {
