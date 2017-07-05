@@ -586,6 +586,13 @@ footer img {
     .save-deck-button{
       width: 200px;
     }
+
+    img.card-image:hover{
+      border: 1px solid #FF9C00;
+      border-radius: 10%;
+      cursor: pointer;
+      padding: 0px;
+    }
 }
 
 @media only screen and (max-width: 600px) {
