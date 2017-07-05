@@ -7,9 +7,20 @@ import crown from '../../images/crown.png';
 import { slide as Menu } from 'react-burger-menu';
 
 export class Header extends React.Component {
+    constructor(props){
+        super(props);
+        this.state={
+            isMenuOpen: false
+        }
+    }
+
 
     showSettings(event){
       event.preventDefault();
+    }
+
+    closeMenu(){
+        this.setState({isMenuOpen:false});
     }
 
     render() {
@@ -17,7 +28,7 @@ export class Header extends React.Component {
           <div>
             <nav>
               <li className="app-heading" >
-                <Link to="/" className="nav-link">
+                <Link to="/">
                   <img className="clash-logo" src={clashRoyaleLogo} alt="Clash Royale Logo" />
                   <h1> Deck Builder </h1>
                 </Link>
@@ -29,10 +40,10 @@ export class Header extends React.Component {
               </ul>
               <ul className="nav-wrapper hidden-for-web" >
                 <img onClick={this.showSettings} className="hamburger-icon" src={crown}  alt="Nav Toggle Icon"/>
-                <Menu right width={'100%'}>
-                <li><Link to="/build" className="nav-link menu-item">BUILD</Link></li>
-                <li><Link to="/decks" className="nav-link menu-item">DECKS</Link></li>
-                <li><Link to="/cards" className="nav-link menu-item">ALL CARDS</Link></li>
+                <Menu right width={'100%'} isOpen={ this.state.isMenuOpen }>
+                <li><Link onClick={this.closeMenu.bind(this)} to="/build" className="nav-link menu-item">BUILD</Link></li>
+                <li><Link onClick={this.closeMenu.bind(this)} to="/decks" className="nav-link menu-item">DECKS</Link></li>
+                <li><Link onClick={this.closeMenu.bind(this)} to="/cards" className="nav-link menu-item">ALL CARDS</Link></li>
                 </Menu>
               </ul>
             </nav>
