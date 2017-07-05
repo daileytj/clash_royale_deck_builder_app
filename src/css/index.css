@@ -259,7 +259,7 @@ nav:after {
 
 /*-------------------------------------------------------------------------*/
 .deck-builder-and-options-container{
-  width: 90%;
+  width: 70%;
   margin: 20px auto;
   border: 5px solid black;
   border-radius: 10px;
@@ -371,8 +371,11 @@ fieldset {
     margin: 0 auto;
 }
 
-.card-container:hover{
-  border-color: #FF9C00;
+img.card-image:hover{
+  border: 5px solid #FF9C00;
+  border-radius: 10%;
+  cursor: pointer;
+  padding: 0px;
 }
 
 /*-------------------------------------------------------------------------*/
@@ -438,6 +441,10 @@ fieldset {
   .card{
     display: inline-block;
     width: 25%;
+  }
+
+  .available-card-list .card{
+    width: 16.625%;
   }
 
   .card-image{
