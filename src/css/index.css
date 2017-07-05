@@ -565,6 +565,10 @@ footer img {
     .deck-builder-and-options-container{
       width: 90%;
     }
+
+    .save-deck-button{
+      width: 200px;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -575,10 +579,12 @@ footer img {
 
   .card{
     width:25%;
+    padding: 5px;
   }
 
   .available-card-list .card{
     width: 25%;
+    padding: 5px;
   }
 
 }
