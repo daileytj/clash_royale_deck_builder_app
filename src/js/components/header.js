@@ -40,7 +40,7 @@ export class Header extends React.Component {
               </ul>
               <ul className="nav-wrapper hidden-for-web" >
                 <img onClick={this.showSettings} className="hamburger-icon" src={crown}  alt="Nav Toggle Icon"/>
-                <Menu right width={'100%'} isOpen={ this.state.isMenuOpen }>
+                <Menu noOverlay right width={'100%'} isOpen={ this.state.isMenuOpen }>
                 <li><Link onClick={this.closeMenu.bind(this)} to="/build" className="nav-link menu-item">BUILD</Link></li>
                 <li><Link onClick={this.closeMenu.bind(this)} to="/decks" className="nav-link menu-item">DECKS</Link></li>
                 <li><Link onClick={this.closeMenu.bind(this)} to="/cards" className="nav-link menu-item">ALL CARDS</Link></li>
