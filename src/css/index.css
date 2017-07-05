@@ -73,6 +73,10 @@ nav {
   color:white
 }
 
+.app-heading a h1:hover{
+  color:#ff9c00;
+}
+
 .app-heading a h1:visited{
   color:white;
 }
