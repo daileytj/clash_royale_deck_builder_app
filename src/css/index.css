@@ -561,6 +561,10 @@ footer img {
     .deck-strategy{
       height: 150px;
     }
+
+    .deck-builder-and-options-container{
+      width: 90%;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -570,6 +574,11 @@ footer img {
   }
 
   .card{
-    width:50%;
+    width:25%;
   }
+
+  .available-card-list .card{
+    width: 20%;
+  }
+
 }
