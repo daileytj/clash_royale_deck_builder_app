@@ -10,6 +10,8 @@ export class DeckBuildOptions extends React.Component{
         const strategy=values.strategy;
         const customDeck=this.props.customDeck.cards;
         this.props.addNewCustomDeck(title, strategy, customDeck);
+        values.title='';
+        values.strategy='';
     }
 
   render(){
