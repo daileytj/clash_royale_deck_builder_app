@@ -371,6 +371,10 @@ fieldset {
     margin: 0 auto;
 }
 
+.card-container:hover{
+  border-color: #FF9C00;
+}
+
 /*-------------------------------------------------------------------------*/
 
 
