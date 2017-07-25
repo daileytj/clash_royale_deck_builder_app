@@ -4,7 +4,7 @@ import Card from './card';
 import {getAllAvailableCards, addCardToCustomDeck} from '../actions/index.js';
 
 class AvailableCardList extends React.Component{
-  
+
   componentDidMount() {
       this.props.getAllAvailableCards();
     }
@@ -17,6 +17,7 @@ class AvailableCardList extends React.Component{
   render(){
     return(
       <div className="available-card-list">
+        <h2>Available Characters</h2>
         {this.props.cards.map((card,i) => <Card key={i} i={i} card={card} onClick={this.addCardHandler.bind(this, card)}/>)}
       </div>
     )

@@ -9,8 +9,8 @@ class Build extends Component{
     return(
       <div className="build-page">
         <div className="deck-builder-and-options-container">
-          <DeckBuilder />
           <DeckBuildOptions />
+          <DeckBuilder />
           <AvailableCardList />
         </div>
       </div>

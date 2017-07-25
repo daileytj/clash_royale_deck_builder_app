@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import { Field, reduxForm } from 'redux-form'
 import {addNewCustomDeck} from '../actions/index';
+import blueKing from '../../images/blue-king.png';
 
 export class DeckBuildOptions extends React.Component{
 
@@ -17,7 +18,13 @@ export class DeckBuildOptions extends React.Component{
   render(){
     return(
       <div className="deck-builder-options-wrapper">
-          <form onSubmit={this.props.handleSubmit(this.submitHandler.bind(this))}>
+        <img className="blue-king clearfix" src={blueKing} alt="Blue King"/>
+        <div className = "deck-builder-instructions">
+          <h2>Ok, I made it this far... now what?</h2>
+          <p>Build your custom deck from the characters below. Simply click on a character image to add it to your deck. If you make a mistake and need to remove a character, simply click on the image of the character stored in your custom deck and it will vanish.</p>
+          <p>When you have all 8 characters selected, fill out the form fields below and click "Save Deck" to store it in the "Decks" page for everyone to view.</p>
+        </div>
+          <form className="clearfix" onSubmit={this.props.handleSubmit(this.submitHandler.bind(this))}>
             <fieldset>
               <label className="deck-title-label" name="title">Title</label>
               <Field id="title" component="input" name="title" className="deck-title-input" type="text" placeholder="My Ultimate Deck" required/>

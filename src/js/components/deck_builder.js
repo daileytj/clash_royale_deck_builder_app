@@ -20,6 +20,7 @@ export class DeckBuilder extends React.Component{
     };
     return(
       <div className="deck-builder-container">
+        <h2 className="customDeckHeader">My Custom Deck</h2>
         {this.props.cards.map((item, index) => (
           <div className="card-container deck-builder-deck">
               <Card card={item} key={`deck-card-${index}`} onClick={this.deleteCardHandler.bind(this, index)} />
